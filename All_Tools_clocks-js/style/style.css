@@ -1,0 +1,98 @@
+body {
+    /* Centers the content horizontally and vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0A4F35;
+    background: -moz-radial-gradient(center, #0A4F35 0%, #008080 50%, #2F4F4F 100%);
+    background: -webkit-radial-gradient(center, #0A4F35 0%, #008080 50%, #2F4F4F 100%);
+    background: radial-gradient(ellipse at center, #0A4F35 0%, #008080 50%, #2F4F4F 100%);
+}
+
+h1 {
+    cursor: none;
+    /* Adds a solid border with rounded corners */
+    border-style: solid;
+    border: none;
+    border-radius: 15px;
+    border-width: thin;
+    /* Sets the background color to yellowgreen */
+    background-color: yellowgreen;
+    /* Sets the font family to 'Times New Roman' */
+    font-family: 'Times New Roman', Times, serif;
+    /* Increases the font size to 200% */
+    font-size: 200%;
+    /* Sets the font weight to bolder */
+    font-weight: bolder;
+    /* Sets the font color to navy */
+    color: navy;
+    /* Centers the text horizontally */
+    text-align: center;
+    /* Adds padding around the text */
+    -webkit-box-shadow: 11px -9px 10px 0px #0000FF, 16px -14px 10px 0px #00FF00, 20px -17px 10px 0px #FFFF00, 24px -19px 10px 0px #FF7F00, 27px -23px 10px 0px #FF0000, 5px 5px 15px 5px rgba(0, 0, 0, 0), 5px 5px 15px 5px rgba(0, 0, 0, 0);
+    box-shadow: 11px -9px 10px 0px #0000FF, 16px -14px 10px 0px #00FF00, 20px -17px 10px 0px #FFFF00, 24px -19px 10px 0px #FF7F00, 27px -23px 10px 0px #FF0000, 5px 5px 15px 5px rgba(0, 0, 0, 0), 5px 5px 15px 5px rgba(0, 0, 0, 0);
+    padding: 10px;
+}
+
+#app-cont {
+    /* Centers the content vertically */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#timers {
+    /* Increases the font size to 400% */
+    font-size: 400%;
+    /* Sets the font color to goldenrod */
+    color: goldenrod;
+    /* Sets the font family to 'Times New Roman' */
+    font-family: 'Times New Roman', Times, serif;
+    /* Sets the font weight to bold */
+    font-weight: bold;
+}
+
+#time-now {
+    /* Increases the font size to 400% */
+    font-size: 200%;
+    /* Sets the font color to goldenrod */
+    color: goldenrod;
+    /* Sets the font family to 'Times New Roman' */
+    font-family: 'Times New Roman', Times, serif;
+    /* Sets the font weight to bold */
+    font-weight: bold;
+    text-shadow: 0 0 5px gray, 0 0 10px gray, 0 0 15px gray, 0 0 30px #49FF18, 0 0 75px #49ff18, 24px -13px 0px rgba(29, 176, 206, 0.21);
+}
+
+#controls {
+    /* Centers the content horizontally */
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+button {
+    cursor: pointer;
+
+    /* Adds a box shadow */
+    box-shadow: 2px 2px 7px 1px goldenrod;
+    /* Adds a border with a color of teal */
+    border: 3px solid teal;
+    /* Sets the position to sticky */
+    position: sticky;
+    /* Sets the font family to Arial, Helvetica, sans-serif */
+    font-family: Arial, Helvetica, sans-serif;
+    /* Sets the width to 200px */
+    width: 200px;
+    /* Increases the height to 160% */
+    height: 160%;
+    /* Increases the font size to 150% */
+    font-size: 150%;
+    /* Sets the background color to #8AC007 */
+    background-color: #8AC007;
+    /* Sets the font color to purple */
+    color: #0202e2;
+    font-weight: bold;
+    /* Adds a border radius of 20px */
+    border-radius: 20px;
+}
