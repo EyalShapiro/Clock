@@ -1,12 +1,22 @@
+/* Using a string */
+@import "./button_anima.css";
+
+:root {
+    --border_color: teal;
+    --background_color1: #0A4F35;
+    --background_color2: #008080;
+    --background_color3: #2F4F4F;
+}
+
 body {
     /* Centers the content horizontally and vertically */
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #0A4F35;
-    background: -moz-radial-gradient(center, #0A4F35 0%, #008080 50%, #2F4F4F 100%);
-    background: -webkit-radial-gradient(center, #0A4F35 0%, #008080 50%, #2F4F4F 100%);
-    background: radial-gradient(ellipse at center, #0A4F35 0%, #008080 50%, #2F4F4F 100%);
+    background: var(--background_color1);
+    background: -moz-radial-gradient(center, var(--background_color1) 0%, var(--background_color2) 50%, var(--background_color3) 100%);
+    background: -webkit-radial-gradient(center, var(--background_color1) 0%, var(--background_color2) 50%, var(--background_color3) 100%);
+    background: radial-gradient(ellipse at center, var(--background_color1) 0%, var(--background_color2) 50%, var(--background_color3) 100%);
 }
 
 h1 {
@@ -50,6 +60,12 @@ h1 {
     font-family: 'Times New Roman', Times, serif;
     /* Sets the font weight to bold */
     font-weight: bold;
+    /* רוח למעלה  */
+    margin-top: 10px;
+    /* רוח למטה  */
+    margin-bottom: 10px;
+    border: 2px outset var(--border_color);
+    border-radius: 15px;
 }
 
 #time-now {
@@ -61,38 +77,7 @@ h1 {
     font-family: 'Times New Roman', Times, serif;
     /* Sets the font weight to bold */
     font-weight: bold;
-    text-shadow: 0 0 5px gray, 0 0 10px gray, 0 0 15px gray, 0 0 30px #49FF18, 0 0 75px #49ff18, 24px -13px 0px rgba(29, 176, 206, 0.21);
-}
-
-#controls {
-    /* Centers the content horizontally */
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-button {
-    cursor: pointer;
-
-    /* Adds a box shadow */
-    box-shadow: 2px 2px 7px 1px goldenrod;
-    /* Adds a border with a color of teal */
-    border: 3px solid teal;
-    /* Sets the position to sticky */
-    position: sticky;
-    /* Sets the font family to Arial, Helvetica, sans-serif */
-    font-family: Arial, Helvetica, sans-serif;
-    /* Sets the width to 200px */
-    width: 200px;
-    /* Increases the height to 160% */
-    height: 160%;
-    /* Increases the font size to 150% */
-    font-size: 150%;
-    /* Sets the background color to #8AC007 */
-    background-color: #8AC007;
-    /* Sets the font color to purple */
-    color: #0202e2;
-    font-weight: bold;
-    /* Adds a border radius of 20px */
-    border-radius: 20px;
+    text-shadow: 0 0 30px #49FF18, 0 0 75px #0000FF;
+    border: 2px outset var(--border_color);
+    border-radius: 15px;
 }

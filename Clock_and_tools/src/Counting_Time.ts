@@ -1,23 +1,19 @@
-
-
-
+import { Look_Time } from "./Time_Now";
+//npm run dev
 let stop_interval;
-const delta_mS = 100;
-let timers_ms = 0;
+const delta_mS: number = 1000;//1s
+const timers_elem = document.querySelector('#timers');
 
-function EventStupor() {
-    const start = document.querySelector('#start')
-  start.addEventListener('click', Start);
-  const stop = document.querySelector('#stop')
-  stop.addEventListener('click', Stop)
 
-  const reset = document.querySelector('#reset')
-  reset.addEventListener('click', Reset)
+export function EventStupor() {
+  Reset();//בשביל המרעה
+  let start = document.querySelector('#start');
+  start?.addEventListener('click', Start);
+  let stop = document.querySelector('#stop');
+  stop?.addEventListener('click', Stop);
+  let reset = document.querySelector('#reset');
+  reset?.addEventListener('click', Reset);
 }
-const check_elem=function (elem:) {
-    
-}
-
 function Start() {
   console.log('start');
 
@@ -25,10 +21,12 @@ function Start() {
     console.log("השעון פועל ");
     return;
   }
+  let count_time:number = 0;
   stop_interval = setInterval(function () {
-    timers_ms += 100;
-    document.querySelector('#timers').innerHTML = Timers_To_String();
-
+    count_time += delta_mS;
+    if (timers_elem) {
+      timers_elem.innerHTML = Timers_To_String(count_time / delta_mS);//count_time ms/1000=שנוית 
+    }
   }, delta_mS)
   console.log('start');
 }
@@ -41,16 +39,19 @@ function Stop() {
 
 function Reset() {
   console.log('reset');
-  timers_ms = 0;
-  Stop()
-  document.querySelector('#timers').innerHTML = Timers_To_String();
-
+  Stop();
+  if (timers_elem) {
+    timers_elem.innerHTML = Timers_To_String(0);
+  }
 }
 
-function Timers_To_String() {
-  const milsec = (timers_ms / 100) % 10;
-  const sec = Math.floor(timers_ms / 1000) % 60;
-  const minutes = Math.floor(timers_ms / 1000 / 60)
-  // return `${minutes}: ${sec}: ${milsec}`; //עם זה אנגלית
-  return `${milsec}: ${sec}: ${minutes}`;
+
+
+function Timers_To_String(timers) {//לשים לב שבקריאה הפונקציה אני הופך את זה לשניות
+  timers < 0 ? (timers = 0) : (timers = timers); // בודק שהוא לא מספר שלילי
+  const sec = Look_Time(Math.floor(timers) % 60),//שנוית
+    minutes = Look_Time(Math.floor(timers / 60) % 60),//דקות
+    hours = Look_Time(Math.floor(timers / 60 / 60) % 24),//שעות
+    date = Look_Time(Math.floor(timers / 60 / 60 / 24));//ימים
+  return `${date}d : ${hours}h : ${minutes}m : ${sec}s`;
 }
