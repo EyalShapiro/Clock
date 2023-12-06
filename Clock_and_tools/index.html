@@ -1,13 +1,33 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="public/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src='./main.ts'></script>
-  </body>
+<!DOCTYPE html>
+<html lang="he">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="./public/typescript.svg" />
+
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/animation.css">
+  <title>סטופר</title>
+</head>
+
+<body dir="rtl">
+
+  <div id="app-cont">
+    <h1> סטופר ללימודים</h1>
+    <!-- container -->
+    <div id="time-now">00 : 00 : 00 כן הולך להיות השעה והתאריך של החישב</div>
+    <div id="timers">00:00:00</div>
+    <div id="controls">
+      <button id="start">התחלה</button>
+      <button id="stop">לעצור</button>
+      <button id="reset">איפוס</button>
+
+    </div>
+  </div>
+  <script type="module" src='./main.ts'></script>
+  <!-- <script  src="main.js"></script> -->
+
+</body>
+
 </html>
