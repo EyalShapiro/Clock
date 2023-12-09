@@ -1,10 +1,16 @@
- 
+:root {
+    --background-on: linear-gradient(300deg, #ff0000, #dc140c, #ff4500, #FF6350, #ff7300, #F4A460, #fffb00, GreenYellow, #00FF7F, #48ff00, #00ffd5, #4ea531, DarkTurquoise, #0086b0, #008080, DodgerBlue, #0A4F35, #002bff, DarkOrchid, Fuchsia, #ff00c8, #ff0000);
+}
 
 #controls {
     /* Centers the content horizontally */
     width: 100%;
     display: flex;
     justify-content: space-evenly;
+}
+
+#alarm-time {
+    font-size: 120% !important;
 }
 
 button {
@@ -18,24 +24,71 @@ button {
     position: sticky;
     /* Sets the font family to Arial, Helvetica, sans-serif */
     font-family: Arial, Helvetica, sans-serif;
-    width: 220px;
-    height: 50px;
+    width: auto;
+    height: auto;
     /* Increases the font size to 150% */
     font-size: 150%;
     outline: none;
     color: #fff;
     background: #111;
     position: relative;
-    z-index: 0;
+    border-radius: 10px;
+
+}
+
+h3 {
+    /* Adds a box shadow */
+    box-shadow: 2px 2px 7px 1px goldenrod;
+    /* Adds a border with a color of teal */
+    border: 3px solid teal;
+    /* Sets the position to sticky */
+    position: sticky;
+    /* Sets the font family to Arial, Helvetica, sans-serif */
+    font-family: Arial, Helvetica, sans-serif;
+    /* Increases the font size to 150% */
+    font-size: 150%;
+    outline: none;
+    background-color: #fff;
+    color: #111;
+    position: relative;
+    border-radius: 10px;
+}
+
+
+h3:active,
+.app-top:hover {
+    background: var(--background-on);
+    color: gold;
+}
+
+
+h1:active,
+h3:hover:active {
+    cursor: text;
+    color: snow !important;
+}
+
+
+
+h3:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    left: 0;
+    top: 0;
     border-radius: 10px;
 }
 
 button:before {
+    /* לחיצה על קפתור */
     content: '';
-    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #00FF00, #48ff00, #00ffd5, #008080, #0A4F35, #002bff, #7a00ff, #ff00c8, #ff0000);
+    background: var(--background-on);
     position: absolute;
     top: -2px;
-    left: -2px;
+    left: -3px;
     background-size: 400%;
     z-index: -1;
     filter: blur(5px);
@@ -49,7 +102,8 @@ button:before {
 }
 
 button:active {
-    color: #000
+    color: silver;
+
 }
 
 button:active:after {
@@ -57,7 +111,7 @@ button:active:after {
 }
 
 button:hover:before {
-    opacity: 1;
+    opacity: 0.5;
 }
 
 button:after {
@@ -69,7 +123,7 @@ button:after {
     background: #111;
     left: 0;
     top: 0;
-    border-radius: 10px;
+    border-radius: 10%;
 }
 
 @keyframes glowing {
@@ -84,7 +138,10 @@ button:after {
     100% {
         background-position: 0 0;
     }
-}button:hover {
+}
+
+button:hover {
+    /* עכבר על כפתור */
     animation: jello-vertical 0.5s both;
 }
 

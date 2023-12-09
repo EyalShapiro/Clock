@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="he">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="./icon/stopwr.png" />
+
+  <link rel="stylesheet" href="./style/main.css">
+  <title>סטופר</title>
+</head>
+
+<body dir="rtl">
+  <!-- br=\n -->
+  <br>
+  <div class="app-top">
+    <h1> שעון נדיר </h1>
+  </div>
+  <br>
+
+
+  <div class="app-time">
+    <!-- container -->
+    <div class='app-time-now'>
+      <h3>הזמן עכשיו</h3>
+      <div id="time-now">השעה עכשיו: <b>00h : 00m :00s </b><br>אתריך של היום:<b>0/0/0</b>
+      </div>
+    </div>
+    <div class="app-count-forward">
+      <!-- count forward=ספירה קדימה -->
+      <h3>ספירה קדימה/שעון עצר </h3>
+      <main id="count-time" class='timer'>00d : 00h : 00m : 00s</main>
+      <div id="controls">
+        <button id="start">התחלה</button>
+        <button id="stop">לעצור</button>
+        <button id="reset">איפוס</button>
+      </div>
+    </div>
+    <div class="app-count-down">
+      <!-- count down=ספירה אחורה -->
+      <table id="app-input-num">
+        <tr>
+          <h3>ספירה אחורה/סטופר </h3>
+        </tr>
+        <tr>
+          <main id="Countdown" class='timer'>00d : 00h : 00m : 00s</main>
+          <button id="alarm-time">התחל שעון</button>
+        </tr>
+        <tr class="input-time">
+          <td class="inp-t"><b class="text">שנוית:</b>
+            <input name="second" type="number" id="sec-inp" min="0" max="59" value="00" />
+          </td>
+          <td class="inp-t"><b class="text">דקות:</b>
+            <input name="minutes" type="number" id="minut-inp" min="0" max="59" value="00" />
+          </td>
+          <td class="inp-t"><b class="text">שעות:</b>
+            <input name="hours" type="number" id="hours-inp"  min="0" max="23" value="00" />
+          </td>
+          <td class="inp-t"><b class="text">ימים:</b>
+            <input name="day" type="number" id="day-inp" min="0" max="365" value="00" />
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <script async type="module" src='./main.ts'></script>
+  <!-- <script  src="main.js"></script> -->
+</body>
+
+</html>

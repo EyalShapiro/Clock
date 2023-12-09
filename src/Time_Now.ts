@@ -1,3 +1,4 @@
+import { Look_Time } from "./func_helps";
 
 
 
@@ -14,7 +15,7 @@
  *                   - time_in_html: A function that returns a formatted string
  *                                   with the current time and date.
  */
-export async function Get_TimeNow() {
+export async function TimeNow() {
   const d: Date = new Date();
   const elem = document.querySelector('#time-now');
   const obj_time = {
@@ -26,27 +27,22 @@ export async function Get_TimeNow() {
       let data_now: string = d.toLocaleDateString();
       return data_now;
     },
-   time_in_html:function ():string {
-          return `${this.hour}h : ${this.minutes}m : ${this.sec}s |אתריך של היום:${this.get_date()}`} 
+    time_in_html: function (): string {
+      if (this) {
+        return `השעה עכשיו:<b>${this.hour}h : ${this.minutes}m : ${this.sec}s </b><br>אתריך של היום:<b>${this.get_date()}</b>`
+      } 
+      else {
+        return `השעה עכשיו: <b>00h : 00m :00s </b><br>אתריך של היום:<b>0/0/0</b>`
+      }
+    }
   }
     
   if (elem) {
     // elem.innerHTML = `השעה עכשיו: <b>${time_now}</b>`; // Add emphasis to the time
-        elem.innerHTML = `השעה עכשיו: <b>${obj_time.time_in_html()}</b>`; // Add emphasis to the time
+        elem.innerHTML = ` ${obj_time.time_in_html()}`; // Add emphasis to the time
   }
   return obj_time;
  
 }
 
 
-/**
- * Returns a string representation of the given number with a leading zero if the number is less than 10.
- *
- * @param {number} num - The number to pad.
- * @return {string} - The padded string representation of the number.
- */
-export function Look_Time(num: number) {
-
-  return (num < 10 ? "0" : "") + num;
-  
-}

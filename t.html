@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .app-count-down {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            outline-style: dotted;
+        }
+
+        input {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app-count-down">
+        <table id="app-input-num">
+            <tr>
+                <h3>ספירה אחורה/סטופר </h3>
+            </tr>
+
+            <tr class="title-count-down">
+                <td name="day">day</td>
+                <td name="hours">hours</td>
+                <td name="minutes">minutes</td>
+                <td name="second">second</td>
+            </tr>
+            <tr class="input-time">
+                <td><input type="number" id="day-inp" min="0" max="365" value="00" name="day" /></td>
+                <td><input type="number" id="hours-inp" min="0" max="60" value="00" name="hours" /></td>
+                <td><input type="number" id="minutes-inp" min="0" max="60" value="00" name="minutes" /></td>
+                <td> <input type="number" id="sec-inp" min="0" max="60" value="00" name="second" /> </td>
+                <td> <button id="alarm-time">התחל שעון</button></td>
+            </tr>
+            <tr>
+                <td>
+                    <main id="Countdown" class='timer'>00d : 00h : 00m : 00s</main>
+                </td>
+            </tr>
+
+
+        </table>
+    </div>
+</body>
+
+</html>
