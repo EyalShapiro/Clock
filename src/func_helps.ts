@@ -43,12 +43,9 @@ export  async function Element_Gone(elem_unknown:HTMLElement,display:string='fle
   }
   return !(elem_unknown.style.display === "none")
 }
-
-
-
 /**
  * Retrieves an element based on the specified means.
- * @TranslateName element access detection=זיהוי גישה לאלמנטים
+ *@TranslateName element access detection=זיהוי גישה לאלמנטים
  * @param {string} means - The means used to search for the element.
  * @return {string} - The element found using the specified means, or an empty string if no element is found.
  */
