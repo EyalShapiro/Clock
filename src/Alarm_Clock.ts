@@ -1,4 +1,4 @@
-import { Look_Time,Timers_To_String } from "./func_helps";
+import { Look_Time_TwoDigit ,Timers_To_String } from "./func_helps";
 //Alarm Clock=שעון מעורר
 //stopwatch=סטופר /שעון עצר
 //בודקר על js בגלל ביות
@@ -26,6 +26,7 @@ function AccessToHtml() {
         hour_inp = document.querySelector('#hors-inp'),
         dey_inp = document.querySelector('#day-inp');
     let sum_time = 0;
+    sec_inp?.innerHTML
     if (dey_inp) {
         sum_time +=Number( dey_inp.value) * 60 * 60 * 24;
     }

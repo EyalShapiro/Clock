@@ -1,0 +1,59 @@
+#app-input-num {
+  padding: auto;
+  border: 0.5px outset var(--border_color);
+  border-radius: 15px;
+  text-align: center;
+}
+table {
+  padding: 0;
+  margin: 0;
+}
+.inp-t,
+span {
+  display: inline-block;
+}
+
+label {
+  color: var(--gold-lite-text);
+  
+}
+input[type="number"],
+input::placeholder {
+  text-align: center;
+  background-color: var(--null);
+  color: var(--gold-lite-text);
+}
+
+input[type="number"] {
+  border: 5% solid var(--border_color);
+  border-radius: 2%;
+  font-weight: bold;
+}
+
+input[type="number"]:focus {
+  background-color: #008080ca;
+  color: seashell;
+}
+
+input[type="number"]:out-of-range {
+  /* יוצא מטווח */
+  background-color: black;
+  border: red solid 4px;
+  color: red;
+}
+
+input[type="number"]:in-range {
+  border: var(--null) solid 2px;
+  color: --dark_gold;
+  font-size: x-large;
+  background-color: var(--null);
+}
+.btn-alarm {
+  display: flex;
+  flex-direction: row !important;
+  justify-content: space-around !important;
+  align-items: center;
+}
+#alarm-time {
+  font-size: 120% !important;
+}

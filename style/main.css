@@ -1,126 +1,143 @@
 /* Using a string */
 @import "./button_anima.css";
-
+@import "./app-count-down.css";
+@import "./hide-bar.css";
 :root {
-    --border_color: teal;
-    --background_color1: #0A4F35;
-    --background_color2: #008080;
-    --background_color3: #2F4F4F;
-    --space: 2.5%
+  --border_color: teal;
+  --background_color1: #0a4f35;
+  --background_color2: #008080;
+  --background_color3: #2f4f4f;
+  --null: transparent;
+  --gold-lite-text: gold;
+  --dark_gold: goldenrod;
 }
 
 html {
-    /* עיצוב רקע  */
-    display: flex;
-    flex-direction: column;
-
-    align-items: center;
-    background: var(--background_color1);
-    background: -moz-radial-gradient(center, var(--background_color1) 0%, var(--background_color2) 50%, var(--background_color3) 100%);
-    background: -webkit-radial-gradient(center, var(--background_color1) 0%, var(--background_color2) 50%, var(--background_color3) 100%);
-    background: radial-gradient(ellipse at center, var(--background_color1) 0%, var(--background_color2) 50%, var(--background_color3) 100%);
+  /* עיצוב רקע  */
+  font-family: Arial, Helvetica, sans-serif !important;
+  background: -moz-radial-gradient(
+    center,
+    var(--background_color1) 0%,
+    var(--background_color2) 50%,
+    var(--background_color3) 100%
+  );
+  background: -webkit-radial-gradient(
+    center,
+    var(--background_color1) 0%,
+    var(--background_color2) 50%,
+    var(--background_color3) 100%
+  );
+  background: radial-gradient(
+    ellipse at center,
+    var(--background_color1) 0%,
+    var(--background_color2) 50%,
+    var(--background_color3) 100%
+  );
 }
-
-.app-count-down,
-.app-time-now,
-.app-count-forward {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    outline-style: solid;
-    outline-color: #008585;
-    border-radius: 15px;
-    border: 0.5px outset var(--bord-er_color);
-
+.app-time {
+  /* display: inline-block;
+  flex-direction: column;
+  margin: auto; */
+  align-items: center;
+  margin-right: 20%;
+  margin-left: 20%;
 }
-
+.are-app {
+  --space: 1.5%;
+  margin-bottom: var(--space);
+  margin-top: var(--space);
+  text-align: center;
+  padding: 2%;
+}
 .app-top {
-    margin-top: 2%;
-    padding: 8%;
-    cursor: none;
-    /* Adds a solid border with rounded corners */
-    border-style: solid;
-    border-radius: 15px;
-    border-width: thin;
-    background-color: darkcyan;
-    /* Sets the font family to 'Times New Roman' */
-    font-family: 'Times New Roman', Times, serif;
-    /* Increases the font size to 200% */
-    font-size: 200%;
-    /* Sets the font weight to bolder */
-    font-weight: bolder;
-    /* Sets the font color to navy */
-    color: lavender;
+  text-decoration: underline;
+  margin-top: 2%;
+  padding: 8%;
+  cursor: none;
+  /* Adds a solid border with rounded corners */
+  border-style: solid;
+  border-radius: 15px;
+  border-width: thin;
+  background-color: darkcyan;
+  /* Sets the font family to 'Times New Roman' */
+  font-family: "Times New Roman", Times, serif;
+  /* Increases the font size to 200% */
+  font-size: 150%;
+  /* Sets the font weight to bolder */
+  font-weight: bolder;
+  /* Sets the font color to navy */
+  color: lavender;
+  /* Centers the text horizontally */
+  text-align: center;
+  /* Adds padding around the text */
+  --back-color-h1: 11px -9px 10px 0px #0000ff, 16px -14px 10px 0px #00ff00,
+    20px -17px 10px 0px #ffff00, 24px -19px 10px 0px #ff7f00,
+    27px -23px 10px 0px #ff0000, 5px 5px 15px 5px rgba(0, 0, 0, 0),
+    5px 5px 15px 5px rgba(0, 0, 0, 0);
+  -webkit-box-shadow: var(--back-color-h);
+  box-shadow: var(--back-color-h1);
+  /* top | right | bottom | left */
 
-    /* Centers the text horizontally */
-    text-align: center;
-    /* Adds padding around the text */
-    -webkit-box-shadow: 11px -9px 10px 0px #0000FF, 16px -14px 10px 0px #00FF00, 20px -17px 10px 0px #FFFF00, 24px -19px 10px 0px #FF7F00, 27px -23px 10px 0px #FF0000, 5px 5px 15px 5px rgba(0, 0, 0, 0), 5px 5px 15px 5px rgba(0, 0, 0, 0);
-    box-shadow: 11px -9px 10px 0px #0000FF, 16px -14px 10px 0px #00FF00, 20px -17px 10px 0px #FFFF00, 24px -19px 10px 0px #FF7F00, 27px -23px 10px 0px #FF0000, 5px 5px 15px 5px rgba(0, 0, 0, 0), 5px 5px 15px 5px rgba(0, 0, 0, 0);
-    padding: 10px;
+  padding: 0, 15%, 0, 15%;
 }
 
-
-div {
-    margin-bottom: var(--space);
-    margin-top: var(--space);
-    text-align: center;
-    /* align-items: center; */
+.app-hide,
+.app-time-now,
+.app-count-down,
+.app-count-up {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  outline-style: outset;
+  outline-color: #008585;
+  border-radius: 15px;
+  border: 0.5px outset var(--bord-er_color);
+  align-self: center;
 }
 
 .timer {
-    /* Increases the font size to 400% */
-    font-size: 300%;
-    /* Sets the font color to goldenrod */
-    color: goldenrod;
-    /* Sets the font family to 'Times New Roman' */
-    font-family: 'Times New Roman', Times, serif;
-    /* Sets the font weight to bold */
-    font-weight: bold;
-    margin-bottom: 10px;
-    border: 0.5px outset var(--border_color);
-    border-radius: 15px;
+  /* Increases the font size to 400% */
+  font-size: 250%;
+  color: var(--gold-lite-text);
+  /* Sets the font family to 'Times New Roman' */
+  font-family: "Times New Roman", Times, serif;
+  /* Sets the font weight to bold */
+  font-weight: bold;
+  margin-bottom: 10px;
+  border: 0.5px outset var(--border_color);
+  border-radius: 5%;
 }
-
 
 #time-now {
-    text-align: center;
-    /* Increases the font size to 400% */
-    font-size: 200%;
-    /* Sets the font color to goldenrod */
-    color: goldenrod;
-    /* Sets the font family to 'Times New Roman' */
-    font-family: 'Times New Roman', Times, serif;
-    /* Sets the font weight to bold */
-    font-weight: bold;
-    text-shadow: 0 0 30px teal, 0 0 25px darkcyan;
-    border: 0.5px outset var(--border_color);
-    border-radius: 15px;
+  text-align: center;
+  /* Increases the font size to 400% */
+  font-size: 240% !important;
+  text-shadow: 0 0 30px teal, 0 0 25px darkcyan;
 }
 
-.timer:active,
-#time-now:active {
-    background-color: darkcyan;
-    color: gold;
+.timer:active {
+  background-color: darkcyan;
+  color: var(--gold-lite-text);
 }
 
-.text {
-    text-align: center;
-    color: lightgoldenrodyellow;
+#controls {
+  display: flex;
+  flex-direction: row !important;
+  justify-content: space-around !important;
 }
-
-
-input {
-    text-align: center;
-    border: double var(--border_color);
-}
-
-
-.inp-t {
-    justify-content: space-around;
-    display: inline-block;
-    outline-style: double;
-    border-radius: 15px;
-    outline-color: var(--border_color);
+h3 {
+  text-decoration: underline;
+  box-shadow: 2px 2px 7px 1px --dark_gold; /* Adds a box shadow */
+  border: 3px solid teal; /* Adds a border with a color of teal */
+  /* Sets the font family to Arial, Helvetica, sans-serif */
+  font-family: Arial, Helvetica, sans-serif;
+  /* Increases the font size to 150% */
+  font-size: 150%;
+  outline: none;
+  background-color: #fff;
+  color: royalblue;
+  position: relative;
+  border-radius: 10px;
 }

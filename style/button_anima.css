@@ -1,176 +1,165 @@
 :root {
-    --background-on: linear-gradient(300deg, #ff0000, #dc140c, #ff4500, #FF6350, #ff7300, #F4A460, #fffb00, GreenYellow, #00FF7F, #48ff00, #00ffd5, #4ea531, DarkTurquoise, #0086b0, #008080, DodgerBlue, #0A4F35, #002bff, DarkOrchid, Fuchsia, #ff00c8, #ff0000);
+  --background-on: linear-gradient(
+    300deg,
+    #ff0000,
+    #dc140c,
+    #ff4500,
+    #ff6350,
+    #ff7300,
+    #f4a460,
+    #fffb00,
+    GreenYellow,
+    #00ff7f,
+    #48ff00,
+    #00ffd5,
+    #4ea531,
+    DarkTurquoise,
+    #0086b0,
+    #008080,
+    DodgerBlue,
+    #0a4f35,
+    #002bff,
+    DarkOrchid,
+    Fuchsia,
+    #ff00c8,
+    #ff0000
+  );
 }
 
-#controls {
-    /* Centers the content horizontally */
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-}
 
-#alarm-time {
-    font-size: 120% !important;
-}
 
-button {
-    cursor: pointer;
-
-    /* Adds a box shadow */
-    box-shadow: 2px 2px 7px 1px goldenrod;
-    /* Adds a border with a color of teal */
-    border: 3px solid teal;
-    /* Sets the position to sticky */
-    position: sticky;
-    /* Sets the font family to Arial, Helvetica, sans-serif */
-    font-family: Arial, Helvetica, sans-serif;
-    width: auto;
-    height: auto;
-    /* Increases the font size to 150% */
-    font-size: 150%;
-    outline: none;
-    color: #fff;
-    background: #111;
-    position: relative;
-    border-radius: 10px;
-
-}
-
-h3 {
-    /* Adds a box shadow */
-    box-shadow: 2px 2px 7px 1px goldenrod;
-    /* Adds a border with a color of teal */
-    border: 3px solid teal;
-    /* Sets the position to sticky */
-    position: sticky;
-    /* Sets the font family to Arial, Helvetica, sans-serif */
-    font-family: Arial, Helvetica, sans-serif;
-    /* Increases the font size to 150% */
-    font-size: 150%;
-    outline: none;
-    background-color: #fff;
-    color: #111;
-    position: relative;
-    border-radius: 10px;
-}
 
 
 h3:active,
 .app-top:hover {
-    background: var(--background-on);
-    color: gold;
+  background: var(--background-on);
+  color: var(--gold-lite-text);
 }
-
 
 h1:active,
 h3:hover:active {
-    cursor: text;
-    color: snow !important;
+  cursor: text;
+  color: snow !important;
 }
 
-
-
 h3:after {
-    z-index: -1;
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: #fff;
-    left: 0;
-    top: 0;
-    border-radius: 10px;
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+button {
+  cursor: pointer;
+  /* Adds a box shadow */
+  box-shadow: 2px 2px 7px 1px var(--dark_gold);
+  /* Adds a border with a color of teal */
+  border: 3px solid teal;
+  outline: auto;
+  position: relative;
+  /* Sets the font family to Arial, Helvetica, sans-serif */
+  font-family: Arial, Helvetica, sans-serif;
+  width: auto;
+  height: auto;
+  /* Increases the font size to 150% */
+  font-size: 150%;
+  outline: none;
+  color: #fff;
+  background: #111;
+  border-radius: 10%;
+  padding: 2%;
 }
 
 button:before {
-    /* לחיצה על קפתור */
-    content: '';
-    background: var(--background-on);
-    position: absolute;
-    top: -2px;
-    left: -3px;
-    background-size: 400%;
-    z-index: -1;
-    filter: blur(5px);
-    width: calc(100% + 4px);
-    height: calc(100% + 4px);
-    animation: glowing 20s linear infinite;
-    opacity: 0;
-    transition: opacity .3s ease-in-out;
-    font-weight: bold;
-    border-radius: 15px;
+  /* לחיצה על קפתור */
+  position: absolute;
+  top: -2px;
+  left: -3px;
+  z-index: -1;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation:glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  transform: var(--background-on);
+  font-weight: bold;
+  background: var(--background-on);
+
+  border-radius: 10%;
 }
 
 button:active {
-    color: silver;
-
+  color: silver;
 }
 
 button:active:after {
-    background: transparent;
+  background: transparent;
 }
 
 button:hover:before {
-    opacity: 0.5;
+  opacity: 0.5;
 }
 
 button:after {
-    z-index: -1;
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: #111;
-    left: 0;
-    top: 0;
-    border-radius: 10%;
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10%;
 }
 
 @keyframes glowing {
-    0% {
-        background-position: 0 0;
-    }
+  0% {
+    background-position: 0 0;
+  }
 
-    50% {
-        background-position: 400% 0;
-    }
+  50% {
+    background-position: 400% 0;
+  }
 
-    100% {
-        background-position: 0 0;
-    }
+  100% {
+    background-position: 200% 0;
+  }
 }
 
 button:hover {
-    /* עכבר על כפתור */
-    animation: jello-vertical 0.5s both;
+  /* עכבר על כפתור */
+  animation: jello-vertical 0.5s both;
 }
 
 @keyframes jello-vertical {
-    0% {
-        transform: scale3d(1, 1, 1);
-    }
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
 
-    30% {
-        transform: scale3d(0.75, 1.25, 1);
-    }
+  30% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
 
-    40% {
-        transform: scale3d(1.25, 0.75, 1);
-    }
+  40% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
 
-    50% {
-        transform: scale3d(0.85, 1.15, 1);
-    }
+  50% {
+    transform: scale3d(0.85, 1.15, 1);
+  }
 
-    65% {
-        transform: scale3d(1.05, 0.95, 1);
-    }
+  65% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
 
-    75% {
-        transform: scale3d(0.95, 1.05, 1);
-    }
+  75% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
 
-    100% {
-        transform: scale3d(1, 1, 1);
-    }
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
 }

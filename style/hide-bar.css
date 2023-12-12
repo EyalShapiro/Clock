@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+}
+.app-hide-are {
+  display: inline-block;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  max-width: 15%;
+  min-height: 100%;
+  outline: tan ridge 4px;
+
+  background-color: transparent;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 45%;
+  /* background-color: #f1f1f1; */
+  position: fixed;
+  overflow: auto;
+}
+
+li {
+  font-weight: bolder;
+
+  display: block;
+  padding: 8% 8%;
+  text-decoration: none;
+  color: snow;
+  outline: tan ridge 5px;
+  border: darkcyan 4px solid;
+}
+
+li.active {
+  background-color: #04aa6d;
+  color: white;
+}
+p{
+  margin-right: 3%;
+}
+li:hover:not(.active) {
+  background-color: tan;
+  color: darkcyan;
+}
+li > img {
+  border-radius: 10%;
+  max-width: 20%;
+}

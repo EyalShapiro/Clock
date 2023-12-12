@@ -4,61 +4,77 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/svg+xml" href="./icon/stopwr.png" />
+  <link rel="icon" type="image/svg+xml" href="./public/icon/stopwr.png" />
 
   <link rel="stylesheet" href="./style/main.css">
   <title>סטופר</title>
 </head>
 
 <body dir="rtl">
-  <!-- br=\n -->
-  <br>
-  <div class="app-top">
-    <h1> שעון נדיר </h1>
-  </div>
-  <br>
-
-
+  <ul class="app-hide-are">
+    <li id="btn-hide-now"><img src="./public/icon/now.png" style="max-width: 24px;">
+      <a>זמן אמת</a>
+    </li>
+    <li id="btn-hide-CountUp"><img src="./public/icon/stopwr.png" style="max-width: 20px;">
+      <a>שעון ספירה קדימה </a>
+    </li>
+    <li id="btn-hide-CountDown"><img src="./public/icon/ring.png" style="max-width: 40px;">
+      <a>שעון ספירה אחורה </a>
+    </li>
+  </ul>
   <div class="app-time">
+
+    <!-- br=\n -->
+    <br>
+    <div class="app-top are-app">
+      <h1> שעון נדיר </h1>
+
+    </div>
+
+    <br> <!-- <br>==\n -->
     <!-- container -->
-    <div class='app-time-now'>
+    <div class='app-time-now are-app'>
       <h3>הזמן עכשיו</h3>
-      <div id="time-now">השעה עכשיו: <b>00h : 00m :00s </b><br>אתריך של היום:<b>0/0/0</b>
+      <div id="time-now" class="timer">
+        <b>השעה עכשיו: </b><b>00h : 00m :00s </b><br>
+        <b>אתריך של היום:</b><b>0/0/0</b>
       </div>
     </div>
-    <div class="app-count-forward">
+    <div class="app-count-up are-app">
       <!-- count forward=ספירה קדימה -->
       <h3>ספירה קדימה/שעון עצר </h3>
-      <main id="count-time" class='timer'>00d : 00h : 00m : 00s</main>
+      <main id="Count-Up" class='timer'>00d : 00h : 00m : 00s</main>
       <div id="controls">
         <button id="start">התחלה</button>
         <button id="stop">לעצור</button>
         <button id="reset">איפוס</button>
       </div>
     </div>
-    <div class="app-count-down">
+    <div class="app-count-down are-app">
       <!-- count down=ספירה אחורה -->
       <table id="app-input-num">
         <tr>
           <h3>ספירה אחורה/סטופר </h3>
         </tr>
-        <tr>
-          <main id="Countdown" class='timer'>00d : 00h : 00m : 00s</main>
+        <div id="Count-Down-inp" class='timer'>
+          <span class="inp-t"><label for="second">s</label>
+            <input name="second" type="number" id="sec-inp" min="0" max="59" placeholder="00s" required />
+          </span>
+          <span class="inp-t"><label for="minutes">m</label>
+            <input name="minutes" type="number" id="minut-inp" min="0" max="59" placeholder="00m" required />
+          </span>
+          <span class="inp-t"><label for="hours">h</label>
+            <input name="hours" type="number" id="hours-inp" min="0" max="23" placeholder="00h" required />
+          </span>
+          <span class="inp-t"><label for="day">d</label>
+            <input name="day" type="number" id="day-inp" min="0" max="365" placeholder="00d" required />
+          </span>
+        </div>
+
+        <div id="Count-Down" class='timer' style='display:none;'>00d : 00h : 00m : 00s</div>
+        <tr class="btn-alarm">
           <button id="alarm-time">התחל שעון</button>
-        </tr>
-        <tr class="input-time">
-          <td class="inp-t"><b class="text">שנוית:</b>
-            <input name="second" type="number" id="sec-inp" min="0" max="59" value="00" />
-          </td>
-          <td class="inp-t"><b class="text">דקות:</b>
-            <input name="minutes" type="number" id="minut-inp" min="0" max="59" value="00" />
-          </td>
-          <td class="inp-t"><b class="text">שעות:</b>
-            <input name="hours" type="number" id="hours-inp"  min="0" max="23" value="00" />
-          </td>
-          <td class="inp-t"><b class="text">ימים:</b>
-            <input name="day" type="number" id="day-inp" min="0" max="365" value="00" />
-          </td>
+          <button id="reset-alarm">איפוס</button>
         </tr>
       </table>
     </div>
