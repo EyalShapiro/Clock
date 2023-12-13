@@ -1,4 +1,4 @@
-import { Timers_To_String, Get_Elem_Acc_Detect } from "./func_helps";
+import { Timers_To_String, Get_Elem_Acc_Detect } from "./func_helps.ts";
 //Alarm Clock=שעון מעורר
 //stopwatch=סטופר /שעון עצר
 //בודקר על js בגלל ביות
@@ -17,19 +17,20 @@ export function Event_CountDown() {
         else {
             we_started = true;
             Start_Count();
-
             Start();
-
         }
     });
 }
 function Start() {
+    console.log(`Start down`);
+
     if (time_down_elem) { time_down_elem.style.display = 'flex'; }
     if (are_inp) { are_inp.style.display = 'none'; }
     if (btn_down) { btn_down.innerHTML = `איפוס`; }
 
 }
 function Back() {
+    console.log(`Back down`);
     if (time_down_elem) { time_down_elem.style.display = 'none'; }
     if (are_inp) { are_inp.style.display = 'flex'; }
     if (btn_down) {
@@ -46,7 +47,6 @@ function Back() {
  */
 function Start_Count(): boolean {//רק סיפה לאחור גם בלי עדכון 
     let count_time: any = GetSumTimeInp();
-    console.log(count_time);
     const interval_time = setInterval(function () {
         if (count_time > 0 && we_started) {
             console.log(count_time);
@@ -121,6 +121,12 @@ function Set_Time_InHtml(count: number) {
  */
 function PlaySound() {
     let beat = new Audio('./public/horse.mp3');
-    // Play the beat
-    beat.play();
+    beat.play();    // Play the beat
+
+    for (let i = 2; i <= 5; i++) {
+        setTimeout(() => {
+            beat.play();    // Play the beat
+        }, 1000 * i);
+    }
+
 }

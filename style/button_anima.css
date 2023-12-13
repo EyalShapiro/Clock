@@ -25,11 +25,6 @@
     #ff0000
   );
 }
-
-
-
-
-
 h3:active,
 .app-top:hover {
   background: var(--background-on);
@@ -82,7 +77,7 @@ button:before {
   z-index: -1;
   width: calc(100% + 4px);
   height: calc(100% + 4px);
-  animation:glowing 20s linear infinite;
+  animation: glowing 20s linear infinite;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
   transform: var(--background-on);
@@ -92,7 +87,7 @@ button:before {
   border-radius: 10%;
 }
 
-button:active {
+button:hover:active {
   color: silver;
 }
 
@@ -125,7 +120,7 @@ button:after {
   }
 
   100% {
-    background-position: 200% 0;
+    background-position: 0 0;
   }
 }
 

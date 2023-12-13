@@ -1,7 +1,4 @@
-import { Look_Time_TwoDigit } from "./func_helps";
-
-
-
+import { Look_Time_TwoDigit } from "./func_helps.ts";
 /**
  * The TimeNow function gets the current time, creates a time object, and updates the HTML element with
  * the current time.
@@ -15,9 +12,7 @@ export  function TimeNow() {
     elem.innerHTML = obj_time.time_in_html(); // Add emphasis to the time
   }
   return obj_time;
-
 }
-
 const CreateTimeObj = function (d: Date) {
   return {
     miles: Look_Time_TwoDigit(d.getMilliseconds()), //מיל שנוית

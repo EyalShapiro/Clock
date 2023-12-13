@@ -25,8 +25,6 @@ export function Event_CountUpTime() {
  * `'select_up'`.
  */
 async function Set_Time_InHtml(count: number, select: string = select_up) {
-  console.log(`select: ${select}`);
-
   //select :הוספתי כדי שתהיה אופציה לשדרג
   let time_up_elem: HTMLElement | null;
   if (Get_Elem_Acc_Detect(select) != '') {
@@ -57,8 +55,7 @@ async function Start() {
     count_time += delta_sec;
     Set_Time_InHtml(count_time, select_up)
   }, delta_sec)
-
-  console.log('start');
+  console.log('start up');
 }
 
 /**
@@ -66,21 +63,17 @@ async function Start() {
  */
 async function Stop() {
   action = false;
-  console.log('stop');
+  console.log('stop up');
   clearInterval(interval_timer);
   interval_timer = undefined;
 }
-
-
 
 /**
  * This code is written in TypeScript.
  * It contains an asynchronous function named Reset that logs 'reset', stops a process, and sets the time in HTML to 0.
  */
-
-
 async function Reset() {
-  console.log('reset');
+  console.log('reset up');
   Stop();
   Set_Time_InHtml(0);
 }

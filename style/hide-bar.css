@@ -18,7 +18,6 @@ ul {
   margin: 0;
   padding: 0;
   width: 45%;
-  /* background-color: #f1f1f1; */
   position: fixed;
   overflow: auto;
 }
@@ -38,9 +37,7 @@ li.active {
   background-color: #04aa6d;
   color: white;
 }
-p{
-  margin-right: 3%;
-}
+
 li:hover:not(.active) {
   background-color: tan;
   color: darkcyan;
