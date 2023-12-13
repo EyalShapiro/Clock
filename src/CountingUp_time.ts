@@ -1,4 +1,4 @@
-import { Get_Elem_Acc_Detect, Timers_To_String } from "./func_helps";
+import { Get_Elem_Acc_Detect, Timers_To_String } from "./func_helps.ts";
 
 //npm run dev
 let interval_timer: number | undefined;//interval=הפסקה

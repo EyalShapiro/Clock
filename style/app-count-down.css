@@ -48,12 +48,3 @@ input[type="number"]:in-range {
   font-size: x-large;
   background-color: var(--null);
 }
-.btn-alarm {
-  display: flex;
-  flex-direction: row !important;
-  justify-content: space-around !important;
-  align-items: center;
-}
-#alarm-time {
-  font-size: 120% !important;
-}
